@@ -11,3 +11,4 @@ export * from "./events";
 export * from './LogInScreen';
 export * from './BookAppointment';
 export * from './paymentSuccess';
+export * from './notifications';

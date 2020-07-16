@@ -86,7 +86,7 @@ export const BookAppointmentView = styled.View`
 `;
 export const BookTitle = styled.View`
     flex-direction: row;
-    width: 50%;
+    width: 40%;
     justify-content: space-between;
 `;
 export const ActionLeft = styled.TouchableOpacity`

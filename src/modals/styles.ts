@@ -7,6 +7,7 @@ export const TermsContainer = styled.ScrollView`
     padding-horizontal: 15px;
     padding-top: 12px;
     padding-vertical: 140px;
+    background-color: white;
 `;
 
 export const CloseButton = styled.TouchableOpacity`

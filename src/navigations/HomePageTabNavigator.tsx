@@ -22,6 +22,7 @@ import {
   DoctorDetailScreen,
   EventListScreen,
   PaymentSuccessScreen,
+  NotificationScreen,
 } from "../screens";
 import { ToolbarBrandLogo } from "../components";
 
@@ -61,11 +62,6 @@ const HomeTabStack = () => {
         options={{ title: getString("New Appointment") }}
       />
       <Stack.Screen
-        name={NavigationNames.DoctorListScreen}
-        component={DoctorListScreen}
-        options={{ title: getString("Doctors") }}
-      />
-      <Stack.Screen
         name={NavigationNames.DoctorDetailScreen}
         component={DoctorDetailScreen}
       />
@@ -93,18 +89,8 @@ const CalendarTabStack = () => {
   return (
     <Stack.Navigator headerMode="screen" screenOptions={stackScreenOptions}>
       <Stack.Screen
-        name={NavigationNames.CalendarScreen}
-        component={CalendarScreen}
-        options={{ title: getString("Calendar") }}
-      />
-      <Stack.Screen
-        name={NavigationNames.NewAppointmentScreen}
-        component={NewAppointmentScreen}
-        options={{ title: getString("New Appointment") }}
-      />
-      <Stack.Screen
-        name={NavigationNames.DoctorDetailScreen}
-        component={DoctorDetailScreen}
+        name={NavigationNames.NotificationScreen}
+        component={NotificationScreen}
       />
     </Stack.Navigator>
   );
@@ -145,9 +131,9 @@ const MenuTabStack = () => {
   return (
     <Stack.Navigator headerMode="screen" screenOptions={stackScreenOptions}>
       <Stack.Screen
-        name={NavigationNames.EventListScreen}
-        component={EventListScreen}
-        options={{ title: getString("Events") }}
+        name={NavigationNames.DoctorListScreen}
+        component={DoctorListScreen}
+        options={{ title: getString("Doctors") }}
       />
     </Stack.Navigator>
   );

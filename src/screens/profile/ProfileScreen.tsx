@@ -118,7 +118,7 @@ export const ProfileScreen: React.FC<TProps> = props => {
         </SkillContainer>
         <Buttons>
           {buttonList.map((button: string, index: number) =>
-            <Button onPress={() => onClickTab(index)} selected={selectedTab === index}>
+            <Button key={index} onPress={() => onClickTab(index)} selected={selectedTab === index}>
               <StyledText color={selectedTab === index ? "white" : Theme.colors.gray} fontSize={11}>{button}</StyledText>
             </Button>
           )}

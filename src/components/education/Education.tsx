@@ -23,7 +23,7 @@ const Education: React.FC<TProps> = props => {
                     {uni ? <UniversityIcon /> : item.type === "certification" ? <CertificationIcon /> : null}
                     <RightView>
                         <FlexView>
-                            <StyledText style={styles.title} color={Theme.colors.black} fontSize={uni ? 14 : 10} fontWeight="bold">{item.title}</StyledText>
+                            <StyledText style={styles.title} color={Theme.colors.black} fontSize={uni ? 20 : 14} fontWeight="bold">{item.title}</StyledText>
                             <StarCheck />
                         </FlexView>
                         <StyledText color={Theme.colors.black} fontSize={uni ? 18 : 14}>{item.content}</StyledText>

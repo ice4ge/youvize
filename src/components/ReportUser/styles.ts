@@ -11,4 +11,5 @@ export const Container = styled.TouchableOpacity`
     margin-horizontal: 15px;
     padding-vertical: 10px;
     margin-vertical: 30px;
+    width: 80%;
 `;

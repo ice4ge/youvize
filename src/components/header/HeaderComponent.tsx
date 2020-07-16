@@ -24,14 +24,12 @@ import BookIcon from './book';
 import SearchIcon from './SearchIcon';
 import SettingIcon from './SettingIcon';
 import StarIcon from './StarIcon';
+import PlusIcon from './plusIcon';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import { NavigationActions } from 'react-navigation';
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import {
     StyleSheet,
-    ScrollView,
     Text,
-    View,
 } from "react-native";
 import { Theme } from '../../theme';
 
@@ -56,8 +54,13 @@ export const HeaderComponent: React.FC<TProps> = props => {
                     <SearchInput placeholder="What do you want advise on?"></SearchInput>
                     <TouchableOpacity><SettingIcon></SettingIcon></TouchableOpacity>
                 </SearchBox>
-                <BookMarkBox onPress={() => navigation.navigate(NavigationNames.DashBoardTab, { screen: NavigationNames.DoctorListScreen })}>
-                    <StarIcon></StarIcon>
+                <BookMarkBox>
+                    {props.rightIcon != 'plus' &&
+                        <StarIcon></StarIcon>
+                    }
+                    {props.rightIcon == 'plus' && 
+                        <PlusIcon></PlusIcon>
+                    }
                 </BookMarkBox>
             </SearchContainer>}
             {props.HideSearchKey == 'BookAppointment' &&
@@ -65,12 +68,12 @@ export const HeaderComponent: React.FC<TProps> = props => {
                     <ActionLeft>
                         <FontAwesomeIcon color={Theme.colors.gray} size={20} icon={faChevronLeft}></FontAwesomeIcon>
                     </ActionLeft>
-                    
+
                     <BookTitle>
                         <BookIcon></BookIcon>
                         <Text style={styles.BookTitle}>Book Appointment!</Text>
                     </BookTitle>
-                    <BookMarkBox onPress={() => navigation.navigate(NavigationNames.DashBoardTab, { screen: NavigationNames.DoctorListScreen })}>
+                    <BookMarkBox>
                         <StarIcon></StarIcon>
                     </BookMarkBox>
                 </BookAppointmentView>}

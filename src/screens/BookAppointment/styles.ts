@@ -57,6 +57,8 @@ export const MainArea = styled.View`
 
 export const BottomFixedArrow = styled.TouchableOpacity`
     width: 100%;
+    height: auto;
+    background-color: white;
 `;
 
 export const ButtonGoPayment = styled.View`

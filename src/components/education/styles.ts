@@ -10,6 +10,7 @@ export const EducationList = styled.View`
     border-radius: 10px;
     background-color: ${Theme.colors.formBackground};
     margin-bottom: 6px;
+    width: 100%;
     padding-horizontal: 13px;
     flex-direction: row;
     align-items: center;
@@ -18,7 +19,7 @@ export const EducationList = styled.View`
 
 export const RightView = styled.View`
     flex:1;
-    margin-left: 10px;
+    margin-left: 20px;
 `;
 
 export const FlexView = styled.View`

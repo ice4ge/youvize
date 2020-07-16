@@ -60,20 +60,6 @@ export const HomeScreen: React.FC<TProps> = props => {
     });
   }, []);
 
-  // const onClickMenu = (item: HomeMenuItemType) => {
-  //   switch (item.action) {
-  //     case "BookAnAppoinment":
-  //       navigation.navigate(NavigationNames.NewAppointmentScreen);
-  //       break;
-  //     case "LabTestsAtHome":
-  //       //navigation.navigate(NavigationName);
-  //       break;
-  //     case "OnlineHealtConsultant":
-  //       //navigation.navigate(NavigationName);
-  //       break;
-  //   }
-  // };
-
   if (dashboardItem === null) {
     return <Text>Loading</Text>;
   }

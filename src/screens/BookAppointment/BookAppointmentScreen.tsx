@@ -23,14 +23,7 @@ import {
 } from './styles';
 
 import { HeaderComponent } from "../../components/header";
-
-import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-
-import NavigationNames from "../../navigations/NavigationNames";
 import { useNavigation } from "@react-navigation/native";
-
-import moment from 'moment';
 import CalendarStrip from 'react-native-calendar-strip';
 import { Theme } from "../../theme";
 import ScrollToBottom from '../../styles/ScrollToBottom';
@@ -130,7 +123,7 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
                             backgroundColor: Theme.header.colors.backgroundColor,
                             height: 35,
                             width: 35,
-                            paddingTop: 6,
+                            paddingTop: 4,
                             borderRadius: 30,
                             color: Theme.colors.gray,
                         }}
@@ -139,7 +132,7 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
                             backgroundColor: Theme.colors.iconColor,
                             height: 35,
                             width: 35,
-                            paddingTop: 6,
+                            paddingTop: 4,
                             borderRadius: 30,
                             color: Theme.colors.white,
                         }}
@@ -149,8 +142,8 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
                         {BookingTimes.map((Times, i) =>
                             <TimeSection key={i}>
                                 <Text style={styles.TimeTitle}>{Times.Title}</Text>
-                                {Times.Time.map((Hour, i) =>
-                                    <Hours>
+                                {Times.Time.map((Hour, k) =>
+                                    <Hours key={k}>
                                         <Text style={styles.HourText}>{Hour}</Text>
                                     </Hours>
                                 )}
@@ -163,9 +156,7 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
                 </ButtonGoPayment>
                 <BookingFooter></BookingFooter>
             </ScrollViewArea>
-            <BottomFixedArrow>
-                <ScrollToBottom  onPress={handleClick} style={styles.toBottom} color={Theme.colors.gray}></ScrollToBottom>
-            </BottomFixedArrow>
+            <ScrollToBottom onPress={handleClick} style={styles.toBottom} color={Theme.colors.gray}></ScrollToBottom>
         </GlobalContainer>
     )
 }
@@ -192,5 +183,6 @@ const styles = StyleSheet.create({
         width: "100%",
         paddingVertical: 2,
         borderRadius: 20,
+        backgroundColor: 'white',
     }
 });

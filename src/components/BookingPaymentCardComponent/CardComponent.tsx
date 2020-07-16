@@ -1,14 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
-import { GlobalContainer } from "../../styles/GlobalContainer";
+import React from "react";
 import {
     StyleSheet,
     ScrollView,
     Text,
     CheckBox,
-    View,
-    FlatList,
-    TouchableOpacity,
-    Picker,
 } from "react-native";
 import {
     HighlightedCard,
@@ -25,7 +20,6 @@ import { BookingFooter } from "../../components/BookingFooter";
 import { IconInput } from './InputIcon';
 import GlobalButton from "../../styles/GlobalButton";
 
-import NavigationNames from "../../navigations/NavigationNames";
 import { useNavigation } from "@react-navigation/native";
 
 export const CardComponent: React.FC<{}> = props => {

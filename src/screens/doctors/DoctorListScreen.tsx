@@ -4,7 +4,8 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  TouchableOpacity
+  TouchableOpacity,
+  Picker,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { doctorsList } from "../../datas";
