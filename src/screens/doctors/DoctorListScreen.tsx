@@ -81,5 +81,6 @@ const styles = StyleSheet.create({
   picker: {
     height: 25,
     fontSize: 5,
+    color: '#a6a6a6',
   },
 });

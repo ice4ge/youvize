@@ -32,7 +32,6 @@ export const LengthSelect = styled.View`
 
 export const TimeContainer = styled.View`
     width: 100%;
-    padding: 0px 5%;
     flex-direction: row;
     justify-content: center;
 `;
@@ -55,6 +54,7 @@ export const MainArea = styled.View`
     background-color: white;
     margin-left: 3%;
     border-radius: 10px;
+    padding-bottom: 20px;
 `;
 
 export const BottomFixedArrow = styled.TouchableOpacity`

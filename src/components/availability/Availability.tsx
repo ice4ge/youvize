@@ -7,6 +7,7 @@ import TimePicker from '../../styles/TimePicker';
 import { StyledText } from '../../styles/GlobalText';
 import { Theme } from '../../theme';
 import { RightView } from '../education/styles';
+import EditButton from '../../styles/EditButton';
 
 type TProps = {
     availability?: availabilityType[]
@@ -39,7 +40,8 @@ const Availability: React.FC<TProps> = props => {
     };
     return (
         <Container>
-            <StyledText style={styles.title} color={Theme.colors.black} fontSize={18}>General Availability</StyledText>
+            {/* <StyledText style={styles.title} color={Theme.colors.black} fontSize={18}>General Availability</StyledText> */}
+            <EditButton top={-5} right={0}></EditButton>
             <DayList>
                 <StyledText style={styles.flex_1} color={Theme.colors.black}>Available From</StyledText>
                 <StyledText style={styles.flex_1} color={Theme.colors.black}>To</StyledText>

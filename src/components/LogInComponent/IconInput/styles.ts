@@ -6,7 +6,7 @@ export const IconInputContainer = styled.View`
     flex-direction: row;
     position: relative;
     border: 1px solid #e0e0e0;
-    height: 38px;
+    height: 45px;
     border-radius: 6px;
     align-items: center;
     padding-horizontal: 10px;

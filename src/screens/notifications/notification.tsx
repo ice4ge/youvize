@@ -98,6 +98,8 @@ export const NotificationScreen: React.FC<{}> = props => {
                             <NotificationBlock
                                 userData = {item}
                                 backColor={item.isHighlighted ? '#FBF0E6' : 'white'}
+                                nameColor={item.isHighlighted ? 'black' : '#4d4d4d'}
+                                descriptionColor={item.isHighlighted ? 'black' : '#a6a6a6'}
                             />
                         )}
                     />

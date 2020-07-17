@@ -9,6 +9,35 @@ export const ProfileContainer = styled.View`
     border-radius: 10px;
 `;
 
+export const SiteStateCount = styled.View`
+    width: 80%;
+    margin-left: 10%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0px;
+`;
+
+export const StateCard = styled.View`
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+`;
+
+export const Title = styled.Text`
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    color: #cccccc;
+`;
+
+export const Amount = styled.Text`
+    font-size: 20px;
+    color: #404040;
+    font-weight: bold;
+`;
+
 export const VerificationContainer = styled.View`
     flex-direction: row;
     margin-bottom: 11px

@@ -7,6 +7,7 @@ import UniversityIcon from '../../styles/UniversityIcon';
 import CertificationIcon from '../../styles/CertificationIcon';
 import StarCheck from '../../styles/StarCheck';
 import { Theme } from '../../theme';
+import EditButton from '../../styles/EditButton';
 
 type TProps = {
     education?: educationType[]
@@ -17,6 +18,7 @@ const Education: React.FC<TProps> = props => {
 
     return (
         <Educations>
+            <EditButton top={-20} right={0}></EditButton>
             {education?.map((item, index) => {
                 const uni = item.type === "university" ? true : false;
                 return <EducationList key={index}>

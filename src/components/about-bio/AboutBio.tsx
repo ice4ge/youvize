@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { aboutBioType, workHistoryType } from '../../models/ProfileModel';
-import { ProfileContainer, VerificationContainer, HistoryContainer, FlexView } from './styles';
+import {
+    ProfileContainer,
+    VerificationContainer,
+    HistoryContainer,
+    FlexView,
+    SiteStateCount,
+    StateCard,
+    Title,
+    Amount,
+} from './styles';
 import { StyledText } from '../../styles/GlobalText';
 import EditButton from '../../styles/EditButton';
 import MoreLess from '../../styles/MoreLess';
@@ -11,6 +20,7 @@ import { Theme } from '../../theme';
 import { FlatList } from 'react-native';
 import { Rating } from 'react-native-ratings';
 import { Item } from 'react-navigation-header-buttons';
+import { state } from './siteState';
 
 type TProps = {
     aboutBioData?: aboutBioType
@@ -38,6 +48,14 @@ const AboutBio: React.FC<TProps> = props => {
                     <EditButton top={-20} right={0}></EditButton>
                 </ProfileContainer>
                 <PlayVideo></PlayVideo>
+                <SiteStateCount>
+                    {state?.map((value, i) =>
+                        <StateCard key={i}>
+                            <Amount>{value.amount}</Amount>
+                            <Title>{value.title}</Title>
+                        </StateCard>
+                    )}
+                </SiteStateCount>
             </View>
             <ProfileContainer style={styles.verification}>
                 <StyledText color={"#4A4A4A"} fontSize={14} fontWeight={"bold"} style={styles.verifyTitle}>Verifications</StyledText>
@@ -51,7 +69,7 @@ const AboutBio: React.FC<TProps> = props => {
                 )}
             </ProfileContainer>
             <ProfileContainer>
-                <StyledText color={Theme.colors.black} fontSize={18} fontWeight={"bold"}>Work History and Feedback</StyledText>
+                <StyledText color={Theme.colors.black} fontSize={20} fontWeight={"bold"}>Work History and Feedback</StyledText>
             </ProfileContainer>
             <FlatList
                 data={aboutBioData?.workHistory}
@@ -120,6 +138,7 @@ const styles = StyleSheet.create({
     historyCard: {
         backgroundColor: 'white',
         margin: 10,
+        marginTop: 0,
         borderRadius: 20,
         paddingTop: 10,
         paddingBottom: 10,

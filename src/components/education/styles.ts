@@ -8,7 +8,7 @@ export const Educations = styled.View`
 
 export const EducationList = styled.View`
     border-radius: 10px;
-    background-color: ${Theme.colors.formBackground};
+    background-color: white;
     margin-bottom: 6px;
     width: 100%;
     padding-horizontal: 13px;

@@ -4,12 +4,13 @@ import { Theme } from '../../theme';
 
 export const ReaquestButton = styled.TouchableOpacity`
     width: 70%;
-    height: 25px;
+    height: 35px;
     margin-top: 20px;
     border-radius: 5px;
     border: 1px solid ${Theme.colors.avatarBorderColor};
     justify-content: center;
     align-items: center;
+    background-color: white;
 `;
 export const RequestText = styled.Text`
     color: ${Theme.colors.avatarBorderColor};

@@ -8,7 +8,7 @@ export const NotificationCard = styled.TouchableOpacity`
     margin-left: 7%;
     flex-direction: row;
     border-radius: 10px;
-    border: 1px solid #cccccc;
+    border: 1px solid #e6e6e6;
     background-color: ${props => props.background};
     justify-content: center;
     align-items: center;
@@ -37,12 +37,16 @@ export const OnlineCircle = styled.View`
 export const UserName = styled.Text`
     font-size: 17px;
     font-weight: bold;
-    color: #262626;
+    color: ${props => props.color};
 `;
 
 export const BlockTitle = styled.Text`
     font-size: 15px;
     color: #FFA550;
+`;
+
+export const Description = styled.Text`
+    color: ${props => props.color};
 `;
 
 export const RigthBlockEnd = styled.View`
@@ -70,7 +74,7 @@ export const HighLight = styled.Text`
 `;
 
 export const RightClose = styled.Text`
-    padding: 10px;
+    padding: 7px;
     border-radius: 50px;
     background-color: #34AE5D;
     color: white;

@@ -13,6 +13,7 @@ import {
     RightBlockClose,
     UserAvatar,
     OnlineCircle,
+    Description,
 } from './styles';
 import { Avatar } from '../avatar';
 import RightIcon from './rightIcon';
@@ -35,9 +36,9 @@ export const NotificationBlock: React.FC<TProps> = props => {
                         }
                     </UserAvatar>
                     <TextDescription>
-                        <UserName>{props.userData.name}</UserName>
+                        <UserName color={props.nameColor}>{props.userData.name}</UserName>
                         <BlockTitle>{props.userData.title}</BlockTitle>
-                        <Text numberOfLines={1}>{props.userData.description}</Text>
+                        <Description color={props.descriptionColor} numberOfLines={1}>{props.userData.description}</Description>
                     </TextDescription>
                     <RigthBlockEnd>
                         <Text style={styles.time}>{props.userData.time}</Text>
@@ -74,9 +75,11 @@ const styles = StyleSheet.create({
     date: {
         paddingRight: 20,
         color: '#999999',
+        fontSize: 12,
     },
     time: {
         paddingRight: 20,
         color: '#999999',
+        fontSize: 12,
     }, 
 })
