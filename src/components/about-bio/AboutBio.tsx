@@ -26,18 +26,20 @@ const AboutBio: React.FC<TProps> = props => {
 
     return (
         <>
-            <ProfileContainer>
-                <StyledText style={styles.profileTitle} fontSize={18} color={Theme.colors.black} fontWeight={"bold"}>
-                    {aboutBioData?.title}
-                </StyledText>
-                <StyledText numberOfLines={!expanded ? 4 : 0}>
-                    {aboutBioData?.content}
-                </StyledText>
-                <MoreLess onPress={moreClick} expanded={expanded} bottom={-20} right={20}></MoreLess>
-                <EditButton top={-20} right={0}></EditButton>
-            </ProfileContainer>
-            <PlayVideo></PlayVideo>
-            <ProfileContainer>
+            <View style={styles.contain}>
+                <ProfileContainer>
+                    <StyledText style={styles.profileTitle} fontSize={18} color={Theme.colors.black} fontWeight={"bold"}>
+                        {aboutBioData?.title}
+                    </StyledText>
+                    <StyledText>
+                        {aboutBioData?.content}
+                    </StyledText>
+                    {/* <MoreLess onPress={moreClick} expanded={expanded} bottom={-20} right={20}></MoreLess> */}
+                    <EditButton top={-20} right={0}></EditButton>
+                </ProfileContainer>
+                <PlayVideo></PlayVideo>
+            </View>
+            <ProfileContainer style={styles.verification}>
                 <StyledText color={"#4A4A4A"} fontSize={14} fontWeight={"bold"} style={styles.verifyTitle}>Verifications</StyledText>
                 {aboutBioData?.verifications?.map((item: any, index: number) =>
                     <VerificationContainer key={index}>
@@ -54,7 +56,7 @@ const AboutBio: React.FC<TProps> = props => {
             <FlatList
                 data={aboutBioData?.workHistory}
                 renderItem={(row) =>
-                    <HistoryContainer>
+                    <HistoryContainer style={styles.historyCard}>
                         <FlexView>
                             <FlexView>
                                 <Rating
@@ -86,6 +88,19 @@ const AboutBio: React.FC<TProps> = props => {
 }
 
 const styles = StyleSheet.create({
+    contain: {
+        backgroundColor: 'white',
+        borderRadius: 20,
+        width: '95%',
+        paddingBottom: 20,
+    },
+    verification: {
+        backgroundColor: 'white',
+        borderRadius: 20,
+        width: '95%',
+        paddingTop: 10,
+        paddingBottom: 10,
+    },
     profileTitle: {
         marginBottom: 8,
     },
@@ -101,6 +116,13 @@ const styles = StyleSheet.create({
     earnedText: {
         marginVertical: 5,
         paddingHorizontal: 9,
+    },
+    historyCard: {
+        backgroundColor: 'white',
+        margin: 10,
+        borderRadius: 20,
+        paddingTop: 10,
+        paddingBottom: 10,
     }
 })
 

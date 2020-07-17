@@ -105,6 +105,9 @@ export const SkillContainer = styled.View`
     padding-horizontal: 20px;
     padding-vertical: 15px;
     margin-horizontal: 15px;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 20px;
 `;
 
 export const SkillTitle = styled.Text`

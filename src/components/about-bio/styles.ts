@@ -5,6 +5,8 @@ export const ProfileContainer = styled.View`
     padding-left: 20px;
     margin-top: 9px;
     margin-bottom: 30px;
+    width: 90%;
+    border-radius: 10px;
 `;
 
 export const VerificationContainer = styled.View`

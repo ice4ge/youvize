@@ -14,17 +14,19 @@ export const SelectArea = styled.View`
 
 export const CategorySelect = styled.View`
     width: 50%;
-    height: 30px;
+    height: 40px;
     background-color: ${Theme.colors.white};
-    border-radius: 5px;
+    border-radius: 10px;
+    justify-content: center;
     border: 1px solid ${Theme.colors.pickColor};
 `;
 
 export const LengthSelect = styled.View`
     width: 40%;
-    height: 30px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 10px;
     background-color: ${Theme.colors.white};
-    border-radius: 5px;
     border: 1px solid ${Theme.colors.pickColor};
 `;
 

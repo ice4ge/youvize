@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import {
     StyleSheet,
-    ScrollView,
     Text,
-    View,
-    FlatList,
-    TouchableOpacity,
     Picker,
 } from "react-native";
 import { GlobalContainer } from "../../styles/GlobalContainer";
@@ -81,12 +77,11 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
         },
     ];
     const categoryList = [
-        'kss', 'sss', 'aaaa'
+        'category', 'figma', 'scatch'
     ];
     const lengthList = [
-        100, 50, 40
+        'Length', 50, 40
     ];
-    const KEYFLAG = 0;
     const scrollViewRef = useRef();
     const handleClick = () => {
         scrollViewRef.current.scrollToEnd({
@@ -102,15 +97,15 @@ export const BookAppointmentScreen: React.FC<{}> = props => {
             <ScrollViewArea ref={scrollViewRef} style={styles.container} showsVerticalScrollIndicator={true}>
                 <SelectArea>
                     <CategorySelect>
-                        <Picker style={styles.picker} selectedValue={category} onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}>
-                            <Picker.Item label='kss' value='kss' />
-                            <Picker.Item label='sss' value='sss' />
-                            <Picker.Item label='aaa' value='aaa' />
+                        <Picker style={styles.picker} selectedValue={'category'} onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}>
+                            <Picker.Item label='category' value='category' />
+                            <Picker.Item label='figma' value='figma' />
+                            <Picker.Item label='scatch' value='scatch' />
                         </Picker>
                     </CategorySelect>
                     <LengthSelect>
-                        <Picker style={styles.picker}selectedValue={length} onValueChange={(itemValue, itemIndex) => setLength(itemValue)}>
-                            <Picker.Item label='100' value='100' />
+                        <Picker style={styles.picker} selectedValue={'length'} onValueChange={(itemValue, itemIndex) => setLength(itemValue)}>
+                            <Picker.Item label='Length' value='Length' />
                             <Picker.Item label='50' value='50' />
                             <Picker.Item label='30' value='30' />
                         </Picker>
