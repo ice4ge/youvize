@@ -27,7 +27,7 @@ const getMenuItems = (getString: (key: string) => string) => [
     title: getString("My Notifications"),
     iconName: faCommentDots,
     noteNumber: 1,
-    navigateToScreen: NavigationNames.EventListScreen
+    navigateToScreen: NavigationNames.NotificationScreen
   },
   {
     title: getString("Billing & Payment"),
@@ -78,8 +78,10 @@ export const MenuScreen: React.FC<TProps> = props => {
   const onPressMenuItemClick = (item: any) => {
     if (item.openSettings) {
       setIsVisibleSettingModal(true);
-    } else if (item.navigateToScreen) {
+    } else if (item.iconName == faPenSquare) {
       navigation.navigate(NavigationNames.DashBoardTab, { screen: item.navigateToScreen });
+    } else if (item.iconName == faCommentDots) {
+      navigation.navigate(NavigationNames.CalendarTab, {screen: item.navigateToScreen} )
     }
   };
 

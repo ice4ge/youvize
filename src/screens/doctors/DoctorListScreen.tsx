@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -11,10 +11,10 @@ import { useNavigation } from "@react-navigation/native";
 import { doctorsList } from "../../datas";
 import { DoctorItemRow } from "../../components";
 import NavigationNames from "../../navigations/NavigationNames";
-import {HeaderComponent} from "../../components/header";
+import { HeaderComponent } from "../../components/header";
 import GlobalFooter from "../../styles/GolobalFooter";
 import {
-  SelectArea, 
+  SelectArea,
   CategorySelect,
   LengthSelect
 } from './styles';
@@ -24,10 +24,10 @@ type TProps = {};
 export const DoctorListScreen: React.FC<TProps> = props => {
   const navigation = useNavigation();
   const categoryList = [
-      'category: Technology', 'category: figma', 'category: scatch'
+    'category: Technology', 'category: figma', 'category: scatch'
   ];
   const lengthList = [
-      'Sort: Availability', 'Sort: Skills', 'Sort: Reviews'
+    'Sort: Availability', 'Sort: Skills', 'Sort: Reviews'
   ];
   const [category, setCategory] = useState(categoryList[0]);
   const [length, setLength] = useState(lengthList[0]);
@@ -35,21 +35,21 @@ export const DoctorListScreen: React.FC<TProps> = props => {
     <>
       <HeaderComponent></HeaderComponent>
       <SelectArea>
-                    <CategorySelect>
-                        <Picker style={styles.picker} selectedValue={'category:Technology'} onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}>
-                            <Picker.Item label='category:Technology' value='Technology' />
-                            <Picker.Item label='category:figma' value='figma' />
-                            <Picker.Item label='category:scatch' value='scatch' />
-                        </Picker>
-                    </CategorySelect>
-                    <LengthSelect>
-                        <Picker style={styles.picker} selectedValue={length} onValueChange={(itemValue, itemIndex) => setLength(itemValue)}>
-                            <Picker.Item label='Sort:Availability' value='Availability' />
-                            <Picker.Item label='Sort: Skills' value='Skills' />
-                            <Picker.Item label='Sort: Reviews' value='Reviews' />
-                        </Picker>
-                    </LengthSelect>
-                </SelectArea>
+        <CategorySelect>
+          <Picker style={styles.picker} selectedValue={'category:Technology'} onValueChange={(itemValue, itemIndex) => setCategory(itemValue)}>
+            <Picker.Item label='category:Technology' value='Technology' />
+            <Picker.Item label='category:figma' value='figma' />
+            <Picker.Item label='category:scatch' value='scatch' />
+          </Picker>
+        </CategorySelect>
+        <LengthSelect>
+          <Picker style={styles.picker} selectedValue={length} onValueChange={(itemValue, itemIndex) => setLength(itemValue)}>
+            <Picker.Item label='Sort:Availability' value='Availability' />
+            <Picker.Item label='Sort: Skills' value='Skills' />
+            <Picker.Item label='Sort: Reviews' value='Reviews' />
+          </Picker>
+        </LengthSelect>
+      </SelectArea>
       <FlatList
         data={doctorsList}
         renderItem={({ item }) => (

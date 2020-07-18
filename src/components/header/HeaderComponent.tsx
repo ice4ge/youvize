@@ -17,6 +17,7 @@ import {
     BookAppointmentView,
     BookTitle,
     ActionLeft,
+    Skill,
 } from './styles';
 
 import MenuIcon from './MenuIcon';
@@ -30,11 +31,15 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import {
     StyleSheet,
     Text,
+    View,
 } from "react-native";
 import { Theme } from '../../theme';
+import { ScrollView } from 'src/screens/notifications/styles';
+import { ChipInput } from './chipInput';
 
 export const HeaderComponent: React.FC<TProps> = props => {
     const navigation = useNavigation();
+    
     return (
         <HeaderContainer>
             <MenuContainer>
@@ -51,14 +56,15 @@ export const HeaderComponent: React.FC<TProps> = props => {
             {props.HideSearchKey != 'BookAppointment' && <SearchContainer>
                 <SearchBox>
                     <SearchIcon></SearchIcon>
-                    <SearchInput placeholder="What do you want advise on?"></SearchInput>
+                    <ChipInput />
                     <TouchableOpacity><SettingIcon></SettingIcon></TouchableOpacity>
                 </SearchBox>
+
                 <BookMarkBox>
                     {props.rightIcon != 'plus' &&
                         <StarIcon></StarIcon>
                     }
-                    {props.rightIcon == 'plus' && 
+                    {props.rightIcon == 'plus' &&
                         <PlusIcon></PlusIcon>
                     }
                 </BookMarkBox>

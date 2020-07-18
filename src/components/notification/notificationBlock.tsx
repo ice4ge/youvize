@@ -27,6 +27,7 @@ type TProps = {
 export const NotificationBlock: React.FC<TProps> = props => {
     return (
         <NotificationCard background={props.backColor}>
+            
             {props.userData.key == 'person' &&
                 <>
                     <UserAvatar>
@@ -50,8 +51,8 @@ export const NotificationBlock: React.FC<TProps> = props => {
             }
             {props.userData.key == 'alert' &&
                 <>
-                    <AlertDescription>{props.userData.textFirst}<HighLight>{props.userData.highlightedFirst}</HighLight>
-                        <Text>{props.userData.textSecond}</Text><HighLight>{props.userData.highlightedSecond}</HighLight></AlertDescription>
+                    <AlertDescription> {props.userData.textFirst} <HighLight> {props.userData.highlightedFirst} </HighLight>
+                        <Text> {props.userData.textSecond} </Text><HighLight> {props.userData.highlightedSecond} </HighLight></AlertDescription>
                     <RigthBlockEnd>
                         <Text style={styles.date}>{props.userData.time}</Text>
                         <RightBlockClose>

@@ -92,3 +92,14 @@ export const BookTitle = styled.View`
 export const ActionLeft = styled.TouchableOpacity`
     padding-left: 10px;
 `;
+
+export const Skill = styled.TouchableOpacity`
+    background-color: #ffe6cc;
+    border-radius: 10px;
+    padding: 3px 5px;
+    margin-left: 4px;
+    flex-direction: row;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #ffb366;
+`;

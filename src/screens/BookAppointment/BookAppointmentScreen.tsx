@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import {
     StyleSheet,
     Text,
-    Picker,
 } from "react-native";
+import {Picker} from '@react-native-community/picker';
 import { GlobalContainer } from "../../styles/GlobalContainer";
 import {
     SelectArea,

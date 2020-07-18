@@ -11,7 +11,6 @@ import {
   ProfileScreen,
   MenuScreen,
   CalendarScreen,
-  MediaScreen,
   CampaignListScreen,
   CampaignDetailScreen,
   DepartmentListScreen,
@@ -23,6 +22,7 @@ import {
   EventListScreen,
   PaymentSuccessScreen,
   NotificationScreen,
+  MediaScreen,
 } from "../screens";
 import { ToolbarBrandLogo } from "../components";
 
